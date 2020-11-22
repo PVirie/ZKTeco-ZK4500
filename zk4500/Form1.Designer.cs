@@ -36,13 +36,14 @@
             this.txtTemplate = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
+            this.submit_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fpicture)).BeginInit();
             this.SuspendLayout();
             // 
             // btnVerify
             // 
             this.btnVerify.Enabled = false;
-            this.btnVerify.Location = new System.Drawing.Point(569, 68);
+            this.btnVerify.Location = new System.Drawing.Point(569, 67);
             this.btnVerify.Name = "btnVerify";
             this.btnVerify.Size = new System.Drawing.Size(95, 38);
             this.btnVerify.TabIndex = 2;
@@ -68,12 +69,13 @@
             this.fpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.fpicture.TabIndex = 21;
             this.fpicture.TabStop = false;
+            this.fpicture.Click += new System.EventHandler(this.fpicture_Click);
             // 
             // btnRegister
             // 
             this.btnRegister.Location = new System.Drawing.Point(468, 67);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(95, 39);
+            this.btnRegister.Size = new System.Drawing.Size(95, 38);
             this.btnRegister.TabIndex = 22;
             this.btnRegister.Text = "&Register";
             this.btnRegister.UseVisualStyleBackColor = true;
@@ -115,11 +117,22 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // submit_button
+            // 
+            this.submit_button.Location = new System.Drawing.Point(671, 67);
+            this.submit_button.Name = "submit_button";
+            this.submit_button.Size = new System.Drawing.Size(98, 38);
+            this.submit_button.TabIndex = 24;
+            this.submit_button.Text = "Submit";
+            this.submit_button.UseVisualStyleBackColor = true;
+            this.submit_button.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(936, 415);
+            this.Controls.Add(this.submit_button);
             this.Controls.Add(this.txtTemplate);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnRegister);
@@ -147,6 +160,7 @@
         private System.Windows.Forms.TextBox txtTemplate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button submit_button;
     }
 }
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -55,7 +56,7 @@ namespace zk4500
             }
         }
 
-    private void zkFprint_OnImageReceived(object sender, IZKFPEngXEvents_OnImageReceivedEvent e)
+        private void zkFprint_OnImageReceived(object sender, IZKFPEngXEvents_OnImageReceivedEvent e)
         {
             Graphics g = fpicture.CreateGraphics();
             Bitmap bmp = new Bitmap(fpicture.Width, fpicture.Height);
@@ -149,5 +150,27 @@ namespace zk4500
             fpicture.Image = null;
         }
 
+        private void fpicture_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string path = Directory.GetCurrentDirectory();
+            string target = Path.Combine(path, "artifacts");
+            if (!Directory.Exists(target))
+            {
+                Directory.CreateDirectory(target);
+            }
+            fpicture.Image.Save(Path.Combine(target, "data.bmp"));
+        }
+
+        private string dictionary_to_json(Dictionary<int, List<int>> dict)
+        {
+            var entries = dict.Select(d =>
+                string.Format("\"{0}\": [{1}]", d.Key, string.Join(",", d.Value)));
+            return "{" + string.Join(",", entries) + "}";
+        }
     }
 }
