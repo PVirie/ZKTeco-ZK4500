@@ -43,9 +43,10 @@
             // btnVerify
             // 
             this.btnVerify.Enabled = false;
-            this.btnVerify.Location = new System.Drawing.Point(569, 67);
+            this.btnVerify.Location = new System.Drawing.Point(527, 13);
+            this.btnVerify.Margin = new System.Windows.Forms.Padding(4);
             this.btnVerify.Name = "btnVerify";
-            this.btnVerify.Size = new System.Drawing.Size(95, 38);
+            this.btnVerify.Size = new System.Drawing.Size(127, 47);
             this.btnVerify.TabIndex = 2;
             this.btnVerify.Text = "&Verify";
             this.btnVerify.UseVisualStyleBackColor = true;
@@ -54,16 +55,19 @@
             // prompt
             // 
             this.prompt.AutoSize = true;
-            this.prompt.Location = new System.Drawing.Point(139, 352);
+            this.prompt.Location = new System.Drawing.Point(389, 232);
+            this.prompt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.prompt.Name = "prompt";
-            this.prompt.Size = new System.Drawing.Size(50, 13);
+            this.prompt.Size = new System.Drawing.Size(65, 17);
             this.prompt.TabIndex = 3;
             this.prompt.Text = "Ready ...";
+            this.prompt.Click += new System.EventHandler(this.prompt_Click);
             // 
             // fpicture
             // 
             this.fpicture.BackColor = System.Drawing.SystemColors.Window;
-            this.fpicture.Location = new System.Drawing.Point(142, 56);
+            this.fpicture.Location = new System.Drawing.Point(13, 13);
+            this.fpicture.Margin = new System.Windows.Forms.Padding(4);
             this.fpicture.Name = "fpicture";
             this.fpicture.Size = new System.Drawing.Size(268, 283);
             this.fpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -73,9 +77,10 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(468, 67);
+            this.btnRegister.Location = new System.Drawing.Point(392, 13);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(95, 38);
+            this.btnRegister.Size = new System.Drawing.Size(127, 47);
             this.btnRegister.TabIndex = 22;
             this.btnRegister.Text = "&Register";
             this.btnRegister.UseVisualStyleBackColor = true;
@@ -84,34 +89,41 @@
             // deviceSerial
             // 
             this.deviceSerial.AutoSize = true;
-            this.deviceSerial.Location = new System.Drawing.Point(465, 176);
+            this.deviceSerial.Location = new System.Drawing.Point(388, 64);
+            this.deviceSerial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.deviceSerial.Name = "deviceSerial";
-            this.deviceSerial.Size = new System.Drawing.Size(76, 13);
+            this.deviceSerial.Size = new System.Drawing.Size(99, 17);
             this.deviceSerial.TabIndex = 3;
             this.deviceSerial.Text = "Device Serial: ";
+            this.deviceSerial.Click += new System.EventHandler(this.deviceSerial_Click);
             // 
             // txtTemplate
             // 
-            this.txtTemplate.Location = new System.Drawing.Point(468, 214);
+            this.txtTemplate.Location = new System.Drawing.Point(392, 112);
+            this.txtTemplate.Margin = new System.Windows.Forms.Padding(4);
             this.txtTemplate.Multiline = true;
             this.txtTemplate.Name = "txtTemplate";
-            this.txtTemplate.Size = new System.Drawing.Size(424, 82);
+            this.txtTemplate.Size = new System.Drawing.Size(402, 100);
             this.txtTemplate.TabIndex = 23;
+            this.txtTemplate.TextChanged += new System.EventHandler(this.txtTemplate_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(465, 198);
+            this.label1.Location = new System.Drawing.Point(388, 91);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.Size = new System.Drawing.Size(75, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Template: ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(311, 318);
+            this.btnClear.Location = new System.Drawing.Point(392, 267);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(99, 21);
+            this.btnClear.Size = new System.Drawing.Size(132, 26);
             this.btnClear.TabIndex = 22;
             this.btnClear.Text = "&Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -119,19 +131,20 @@
             // 
             // submit_button
             // 
-            this.submit_button.Location = new System.Drawing.Point(671, 67);
+            this.submit_button.Location = new System.Drawing.Point(663, 13);
+            this.submit_button.Margin = new System.Windows.Forms.Padding(4);
             this.submit_button.Name = "submit_button";
-            this.submit_button.Size = new System.Drawing.Size(98, 38);
+            this.submit_button.Size = new System.Drawing.Size(131, 47);
             this.submit_button.TabIndex = 24;
-            this.submit_button.Text = "Submit";
+            this.submit_button.Text = "Store";
             this.submit_button.UseVisualStyleBackColor = true;
             this.submit_button.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(936, 415);
+            this.ClientSize = new System.Drawing.Size(810, 396);
             this.Controls.Add(this.submit_button);
             this.Controls.Add(this.txtTemplate);
             this.Controls.Add(this.btnClear);
@@ -141,6 +154,7 @@
             this.Controls.Add(this.deviceSerial);
             this.Controls.Add(this.prompt);
             this.Controls.Add(this.btnVerify);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "ZK4500";
             this.Load += new System.EventHandler(this.Form1_Load);

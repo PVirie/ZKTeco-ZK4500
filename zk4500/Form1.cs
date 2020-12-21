@@ -172,5 +172,25 @@ namespace zk4500
                 string.Format("\"{0}\": [{1}]", d.Key, string.Join(",", d.Value)));
             return "{" + string.Join(",", entries) + "}";
         }
+
+        private void txtTemplate_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deviceSerial_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void prompt_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
